@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kode Pos Indonesia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <div class="page-container">
+            <div class="header">
+                Kode Pos Indonesia
+            </div>
+            <div class="content-wrap">
+                <div class="main-content">
+                    <p class="content-title">Cari Kode Pos Indonesia</p>
+                    <div class="form-input">
+                        <div class="input-item-container">
+                            <p class="input-title">Provinsi</p>
+                            <select id="select-provinsi" class="select-form-input" onchange="loadKabupatenKota(this.value)" size="1">
+                                <option>Loading</option>
+                            </select>
+                        </div>
+                        <div class="input-item-container">
+                            <p class="input-title">Kota atau Kabupaten</p>
+                            <select id="select-kota-kabupaten" class="select-form-input" onchange="loadKecamatan(this.value)" size="1">
+                                <option>Loading</option>
+                            </select>
+                        </div>
+                        <div class="input-item-container">
+                            <p class="input-title">Kecamatan</p>
+                            <select id="select-kecamatan" class="select-form-input" onchange="loadKelurahan(this.value)" size="1">
+                                <option>Loading</option>
+                            </select>
+                        </div>
+                        <div class="input-item-container">
+                            <p class="input-title">Kelurahan</p>
+                            <select id="select-kelurahan" class="select-form-input" onchange="tampilkanKodePos(this.value)" size="1">
+                                <option>Loading</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="result-container">
+                        <div class="result-background">
+                            <p class="result-text">Kode Pos: <span id="result-postal-code-text"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <script src="index.js" type="text/javascript"></script>
+    </body>
+</html>
