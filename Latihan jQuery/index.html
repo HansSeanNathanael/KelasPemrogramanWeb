@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Latihan jQuery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="d-flex align-items-center justify-content-center mt-5">
+                    <p id="number" class="h4 text-justify">---</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center mt-1">
+                    <button type="button" id="add" class="btn btn-dark">ADD</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                let number = 0;
+
+                $("#add").click(function() {
+                    $("#number").html(number++);
+                    console.log("TES");
+                    if (number & 1) {
+                        $("#add").addClass("btn-warning");
+                        $("#add").removeClass("btn-dark");
+                    }
+                    else {
+                        $("#add").addClass("btn-dark");
+                        $("#add").removeClass("btn-warning");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
